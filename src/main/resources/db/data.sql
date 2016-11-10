@@ -1,0 +1,3 @@
+INSERT INTO customer_details (name, phone_number, email, dob) VALUES ('John Doe', '+381632223134', 'johndoe@example.com', '1999-08-12');
+INSERT INTO customer_details (name, phone_number, email, dob) VALUES ('Jane Doe', '+381612567452', 'janedoe@example.com', '1983-12-23');
+INSERT INTO customer_details (name, phone_number, email, dob) VALUES ('Junior Doe', '+38164215895', 'jrdoe@example.com', '2004-02-29');
