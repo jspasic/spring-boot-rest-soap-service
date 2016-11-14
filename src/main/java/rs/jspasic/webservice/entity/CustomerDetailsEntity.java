@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 public class CustomerDetailsEntity {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="customer_id")
 	private Long customerId;
 	

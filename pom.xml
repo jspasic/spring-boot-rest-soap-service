@@ -77,7 +77,7 @@
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
 					
-					<packageName>rs.jspasic.webservice.model</packageName>
+					<packageName>rs.jspasic.webservice.soap.model</packageName>
 				</configuration>
 			</plugin>
 		</plugins>

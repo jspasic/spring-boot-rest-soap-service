@@ -14,7 +14,7 @@ import org.springframework.xml.xsd.XsdSchema;
 
 @EnableWs
 @Configuration
-public class WebServiceConfig extends WsConfigurerAdapter {
+public class SoapServletConfig extends WsConfigurerAdapter {
 	
 	@Bean
 	public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
@@ -24,18 +24,20 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new ServletRegistrationBean(servlet, "/soap/*");
 	}
 
-	@Bean(name = "countries")
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
+	@Bean(name = "customerdetails")
+	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema customerDetailsSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("CountriesPort");
+		wsdl11Definition.setPortTypeName("CustomerDetailsPort");
 		wsdl11Definition.setLocationUri("/soap");
-		wsdl11Definition.setTargetNamespace("http://jspasic.rs/webservice/ates-web-service");
-		wsdl11Definition.setSchema(countriesSchema);
+		wsdl11Definition.setTargetNamespace("http://jspasic.rs/soap/customerdetails");
+		wsdl11Definition.setSchema(customerDetailsSchema);
 		return wsdl11Definition;
 	}
-
+	
 	@Bean
-	public XsdSchema countriesSchema() {
-		return new SimpleXsdSchema(new ClassPathResource("xsd/countries.xsd"));
+	public XsdSchema customerDetailsSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("xsd/customerDetails.xsd"));
 	}
+	
+	
 }

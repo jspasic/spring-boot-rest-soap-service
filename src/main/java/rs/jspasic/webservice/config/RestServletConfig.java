@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.DispatcherServlet;
 
 @Configuration
-public class DispatcherServletConfig {
+public class RestServletConfig {
 
 	@Bean(name=DispatcherServletAutoConfiguration.DEFAULT_DISPATCHER_SERVLET_BEAN_NAME)
 	public DispatcherServlet dispatcherServlet() {

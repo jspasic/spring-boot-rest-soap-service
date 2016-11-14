@@ -6,4 +6,32 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+.project
+.classpath
 .mvn/timing.properties
+
+
+#
+# Eclipse/STS
+#
+.classpath
+.project
+.settings
+.checkstyle
+.springBeans
+
+bin
+
+#
+# Build
+#
+build
+target
+target-eclipse
+
+#
+# Other
+#
+.log.
+*.log
+*~
