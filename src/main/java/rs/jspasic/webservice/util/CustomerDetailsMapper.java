@@ -37,7 +37,7 @@ public interface CustomerDetailsMapper {
 			xmlDate = DatatypeFactory.newInstance().newXMLGregorianCalendar(gcal);
 		} catch (DatatypeConfigurationException dce) {
 			if (xmlDate == null) {
-				throw new GenericWebServiceException();
+				throw new GenericWebServiceException("Date conversion error");
 			}
 		}
 		customerDetails.setDob(xmlDate);
